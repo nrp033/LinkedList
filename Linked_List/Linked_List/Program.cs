@@ -7,7 +7,7 @@
             Console.WriteLine("\t----- Welcome To LinkedList -----");
 
         Start:
-
+            Console.ReadKey();
             Menu();
             Console.Write("\n\nSelect From Above Option : ");
             int option = Convert.ToInt32(Console.ReadLine());
@@ -46,6 +46,17 @@
                     goto Start;
                     break;
 
+                case 4:
+                    list.Append(56);
+                    list.Append(70);
+                    list.Display();
+                    Console.WriteLine("\n\nAfter Insertion !\n");
+                    list.Insert(2, 30);
+                    list.Display();
+                    goto Start;
+                    break;
+
+
 
                 default:
                     Console.WriteLine("\n***** Wrong Input *****");
@@ -66,6 +77,7 @@
             Console.WriteLine("\n\n1) Simple LinkedList ");
             Console.WriteLine("2) Reverse LinkedList ");
             Console.WriteLine("3) Append int LinkedList");
+            Console.WriteLine("4) Insert At Perticular Position");
 
             Console.WriteLine("\n\nPress 0 to Exit !");
         }
