@@ -56,6 +56,17 @@
                     goto Start;
                     break;
 
+                case 5:
+                    list.Append(56);
+                    list.Append(30);
+                    list.Append(70);
+                    list.Display();
+                    list.Pop();
+                    Console.WriteLine("\n----------After popping first element----------");
+                    list.Display();
+                    goto Start;
+                    break;
+
 
 
                 default:
@@ -78,6 +89,7 @@
             Console.WriteLine("2) Reverse LinkedList ");
             Console.WriteLine("3) Append int LinkedList");
             Console.WriteLine("4) Insert At Perticular Position");
+            Console.WriteLine("5) Deleting First Element From LinkedList");
 
             Console.WriteLine("\n\nPress 0 to Exit !");
         }

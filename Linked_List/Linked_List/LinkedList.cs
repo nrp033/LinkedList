@@ -78,8 +78,21 @@ namespace Linked_List
                 }
             }
         }
+        public void Pop()
+        {
+            if (head != null)
+            {
+                Node temp = this.head;
+                this.head = this.head.next;
+                temp = null;
+            }
+            else
+            {
+                Console.WriteLine("LinkedList is empty");
+            }
+        }
 
-          public  void Display()
+        public  void Display()
             {
                 Node temp = head;
                 if (temp == null)
