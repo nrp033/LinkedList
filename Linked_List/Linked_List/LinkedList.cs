@@ -23,6 +23,23 @@ namespace Linked_List
                 head.next = temp;
             }
         }
+        internal void Append(int data)
+        {
+            Node newNode = new Node(data);
+            if (head == null)
+            {
+                head = newNode;
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = newNode;
+            }
+        }
 
 
         internal void Display()

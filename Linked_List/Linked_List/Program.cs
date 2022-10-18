@@ -38,6 +38,14 @@
                     goto Start;
                     break;
 
+                case 3:
+                    list.Append(56);
+                    list.Append(30);
+                    list.Append(70);
+                    list.Display();
+                    goto Start;
+                    break;
+
 
                 default:
                     Console.WriteLine("\n***** Wrong Input *****");
@@ -57,6 +65,7 @@
         {
             Console.WriteLine("\n\n1) Simple LinkedList ");
             Console.WriteLine("2) Reverse LinkedList ");
+            Console.WriteLine("3) Append int LinkedList");
 
             Console.WriteLine("\n\nPress 0 to Exit !");
         }
