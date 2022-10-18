@@ -6,16 +6,59 @@
         {
             Console.WriteLine("\t----- Welcome To LinkedList -----");
 
-            LinkedList<int> list = new LinkedList<int>();
-            list.AddLast(56);
-            list.AddLast(30);
-            list.AddLast(70);
-            foreach(int item in list)
-            {
-                Console.WriteLine(item);
-            }
-            Console.ReadLine();
+        Start:
 
+            Menu();
+            Console.Write("\n\nSelect From Above Option : ");
+            int option = Convert.ToInt32(Console.ReadLine());
+            LinkedList list=new LinkedList();
+            switch (option)
+            {
+                case 0:
+                    break;
+
+
+                    case 1:
+                    LinkedList<int> simple = new LinkedList<int>();
+                    simple.AddLast(56);
+                    simple.AddLast(30);
+                    simple.AddLast(70);
+                    foreach (int item in simple)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    goto Start;
+                    break;
+
+                case 2:
+                    list.AddReverse(70);
+                    list.AddReverse(30);
+                    list.AddReverse(56);
+                    list.Display();
+                    goto Start;
+                    break;
+
+
+                default:
+                    Console.WriteLine("\n***** Wrong Input *****");
+                    goto Start;
+                    break;
+
+
+
+
+            }
+
+
+
+
+        }
+        public static void Menu()
+        {
+            Console.WriteLine("\n\n1) Simple LinkedList ");
+            Console.WriteLine("2) Reverse LinkedList ");
+
+            Console.WriteLine("\n\nPress 0 to Exit !");
         }
     }
 }
