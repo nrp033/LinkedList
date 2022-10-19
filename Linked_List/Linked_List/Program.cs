@@ -115,6 +115,19 @@
                     break;
 
 
+                case 10:
+                    SortedLinkedList sort = new SortedLinkedList();
+                    sort.Add(56);
+                    sort.Add(30);
+                    sort.Add(40);
+                    sort.Add(70);
+
+                    Console.WriteLine("\n----- After Sorting Elements ----- ");
+                    sort.Display();
+                    goto Start;
+                    break;
+
+
 
 
                 default:
@@ -142,6 +155,7 @@
             Console.WriteLine("7) Search the Element With Position");
             Console.WriteLine("8) Search Element From List and Insert New Element After Serched Node");
             Console.WriteLine("9) Size of List Befor And After Deletion Element From List");
+            Console.WriteLine("10) Ordered Linked List");
             Console.WriteLine("\n\nPress 0 to Exit !");
         }
     }
