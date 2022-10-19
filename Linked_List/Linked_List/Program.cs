@@ -50,7 +50,7 @@
                     list.Append(56);
                     list.Append(70);
                     list.Display();
-                    Console.WriteLine("\n\nAfter Insertion !\n");
+                    Console.WriteLine("\n\n------- After Insertion ! --------\n");
                     list.Insert(2, 30);
                     list.Display();
                     goto Start;
@@ -85,6 +85,21 @@
                     goto Start;
                     break;
 
+                case 8:
+                    list.Append(56);
+                    list.Append(30);
+                    list.Append(70);
+                    list.Display();
+                    int Position = list.SearchNode(30);
+                    Position++;
+                    list.Insert(Position, 40);
+                    Console.WriteLine("\n------ Inserting Node After 30 ------\n");
+                    list.Display();
+                    goto Start;
+
+                    break;
+
+
 
 
 
@@ -111,6 +126,7 @@
             Console.WriteLine("5) Deleting First Element From LinkedList");
             Console.WriteLine("6) Deleting Last Element From LinkedList");
             Console.WriteLine("7) Search the Element With Position");
+            Console.WriteLine("8) Search Element From List and Insert New Element After Serched Node");
 
             Console.WriteLine("\n\nPress 0 to Exit !");
         }
