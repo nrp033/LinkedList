@@ -77,6 +77,14 @@
                     goto Start;
                     break;
 
+                case 7:
+                    list.Append(56);
+                    list.Append(30);
+                    list.Append(70);
+                    list.SearchNode(30);
+                    goto Start;
+                    break;
+
 
 
 
@@ -102,6 +110,7 @@
             Console.WriteLine("4) Insert At Perticular Position");
             Console.WriteLine("5) Deleting First Element From LinkedList");
             Console.WriteLine("6) Deleting Last Element From LinkedList");
+            Console.WriteLine("7) Search the Element With Position");
 
             Console.WriteLine("\n\nPress 0 to Exit !");
         }

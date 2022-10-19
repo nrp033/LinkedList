@@ -108,7 +108,29 @@ namespace Linked_List
             newnode.next = null;
         }
 
-        public  void Display()
+        internal int SearchNode(int data)
+        {
+            int Position = 1;
+            if (head != null)
+            {
+                Node temp = head;
+                while (temp.data != data)
+                {
+                    Position++;
+                    temp = temp.next;
+                }
+                Console.WriteLine("\nNode with Key "+ data+" is at position: "+ Position);
+            }
+            else
+            {
+                Console.WriteLine("Linked List is Empty !");
+            }
+            return Position;
+        }
+
+
+
+        public void Display()
             {
                 Node temp = head;
                 if (temp == null)
