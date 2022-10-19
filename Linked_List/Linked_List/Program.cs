@@ -98,7 +98,21 @@
                     goto Start;
 
                     break;
+                case 9:
 
+                    list.Append(56);
+                    list.Append(30);
+                    list.Append(40);
+                    list.Append(70);
+                    list.Display();
+                    list.size();
+
+                    Console.Write("\nDeleting 40 from the list now \n");
+                    list.delElement(40);
+                    list.Display();
+                    list.size();
+                    goto Start;
+                    break;
 
 
 
@@ -127,7 +141,7 @@
             Console.WriteLine("6) Deleting Last Element From LinkedList");
             Console.WriteLine("7) Search the Element With Position");
             Console.WriteLine("8) Search Element From List and Insert New Element After Serched Node");
-
+            Console.WriteLine("9) Size of List Befor And After Deletion Element From List");
             Console.WriteLine("\n\nPress 0 to Exit !");
         }
     }

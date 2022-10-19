@@ -10,6 +10,24 @@ namespace Linked_List
     public class LinkedList
     {
         internal Node head;
+        public void Display()
+        {
+            Node temp = head;
+            if (temp == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+                return;
+            }
+            else
+            {
+                while (temp != null)
+                {
+                    Console.Write(temp.data + "  ");
+                    temp = temp.next;
+                }
+            }
+        }
+
         internal void AddReverse(int data)
         {
             Node newNode = new Node(data);
@@ -128,25 +146,43 @@ namespace Linked_List
             return Position;
         }
 
+        public void size()
+        {
+            int count = 1;
+            Node temp = head;
 
-
-        public void Display()
+            while (temp.next != null)
             {
-                Node temp = head;
-                if (temp == null)
-                {
-                    Console.WriteLine("LinkedList is empty");
-                    return;
-                }
-                else
-                {
-                    while (temp != null)
-                    {
-                        Console.Write(temp.data + "  ");
-                        temp = temp.next;
-                    }
-                }
+
+                temp = temp.next;
+                count++;
             }
+
+            Console.WriteLine("\nCurrent Size of LinkedList : " +count);
+        }
+        //DelElement is used to delete particular element
+        public void delElement(int data)
+        {
+            //head stored in temp Node
+            Node temp = head, lastNode = null;
+            if (temp != null && temp.data == data)
+            {
+                head = temp.next;
+                return;
+            }
+            while (temp != null && temp.data != data)
+            {
+                lastNode = temp;
+                temp = temp.next;
+            }
+            if (temp == null)
+                return;
+            lastNode.next = temp.next;
+        }
+
+
+
+
         }
     }
 
