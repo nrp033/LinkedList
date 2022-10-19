@@ -62,10 +62,21 @@
                     list.Append(70);
                     list.Display();
                     list.Pop();
-                    Console.WriteLine("\n----------After popping first element----------");
+                    Console.WriteLine("\n----------After popping out first element----------");
                     list.Display();
                     goto Start;
                     break;
+                case 6:
+                    list.Append(56);
+                    list.Append(30);
+                    list.Append(70);
+                    list.Display();
+                    Console.WriteLine("\n----------After popping out Last element----------");
+                    list.PopLast();
+                    list.Display();
+                    goto Start;
+                    break;
+
 
 
 
@@ -90,6 +101,7 @@
             Console.WriteLine("3) Append int LinkedList");
             Console.WriteLine("4) Insert At Perticular Position");
             Console.WriteLine("5) Deleting First Element From LinkedList");
+            Console.WriteLine("6) Deleting Last Element From LinkedList");
 
             Console.WriteLine("\n\nPress 0 to Exit !");
         }

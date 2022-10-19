@@ -91,6 +91,22 @@ namespace Linked_List
                 Console.WriteLine("LinkedList is empty");
             }
         }
+        public void PopLast()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("List is empty");
+            }
+
+            Node newnode = head;
+
+            while (newnode.next.next != null)
+            {
+                newnode = newnode.next;
+            }
+            Node popLast = newnode.next;
+            newnode.next = null;
+        }
 
         public  void Display()
             {
